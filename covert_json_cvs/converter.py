@@ -1,7 +1,7 @@
 import json
 
 
-data = 'input.json'
+data = 'covert_json_cvs/input.json'
 
 
 with open(data, 'r') as file:
@@ -9,7 +9,7 @@ with open(data, 'r') as file:
     
 headers = json_data[0].keys()
 
-with open('output.csv', 'w') as file:
+with open('covert_json_cvs/output.csv', 'w') as file:
     file.write(','.join(headers) + '\n')
     for entry in json_data:
         row = [str(entry[header]) for header in headers]
